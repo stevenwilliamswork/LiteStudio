@@ -2,8 +2,8 @@
   import { onMount } from 'svelte';
   import TextReveal from './TextReveal.svelte';
   import CardProduct from './CardProduct.svelte';
-  import BlurReveal from '$lib/BlurReveal.svelte';
-  import { AnimatedTooltip } from '$lib/components/ui/AnimatedTooltip';
+  import BlurReveal from '../lib/BlurReveal.svelte';
+  import { AnimatedTooltip } from '../lib/components/ui/AnimatedTooltip';
   
   let linkElement: HTMLAnchorElement;
   

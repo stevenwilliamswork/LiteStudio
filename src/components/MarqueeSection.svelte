@@ -3,7 +3,7 @@
   import Marquee from "./Marquee.svelte";
   import ReviewCard from "./ReviewCard.svelte";
   import WorkCard from "./WorkCard.svelte";
-  import { projects } from '$lib/projects';
+  import { projects } from '../lib/projects';
 
   let mounted = false;
   
