@@ -5,6 +5,7 @@
   import TextSection from './components/TextSection.svelte';
   import Footer from './components/Footer.svelte';
   import Work from './components/Work.svelte';
+  import DelayWrapper from './lib/components/DelayWrapper.svelte';
 
   export let url = "";
 </script>
@@ -15,8 +16,10 @@
     <div class="min-h-screen bg-white">
       <Hero />
       <MarqueeSection />
-      <TextSection />
-      <Footer />
+      <DelayWrapper>
+        <TextSection />
+        <Footer />
+      </DelayWrapper>
     </div>
   </Route>
 </Router>
