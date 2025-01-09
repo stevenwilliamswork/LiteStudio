@@ -6,19 +6,20 @@
   import { AnimatedTooltip } from '$lib/components/ui/AnimatedTooltip';
   
   let linkElement: HTMLAnchorElement;
+  let contentLoaded = false;
   
   const teamMembers = [
     {
       id: 1,
       name: "Richie",
       designation: "Software Engineer",
-      image: "/richie.jpg"  // Replace with actual image path
+      image: "/richie.jpg"
     },
     {
       id: 2,
       name: "Steve",
       designation: "Product Engineer",
-      image: "/steve.jpg"  // Replace with actual image path
+      image: "/steve.jpg"
     }
   ];
 
@@ -28,62 +29,51 @@
   const steps = [
     "First call to discuss your idea",
     "A proposal from us to you",
-    "Build + check ins",
-    "Review and hand off"
+    "We start building",
+    "Weekly updates and feedback",
+    "Launch"
   ];
-  const paragraph4 = "We don't believe that \"ideas are worthless.\" See some of what we've done with them.";
-  
-  function handleScroll() {
-    if (!linkElement) return;
-    
-    const rect = linkElement.getBoundingClientRect();
-    const scrollProgress = (window.innerHeight - rect.top) / (window.innerHeight * 0.4);
-    
-    if (scrollProgress > 0.5) {
-      linkElement.classList.add('reveal');
-    } else {
-      linkElement.classList.remove('reveal');
-    }
-  }
-  
+
   onMount(() => {
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
-    
-    return () => window.removeEventListener('scroll', handleScroll);
+    setTimeout(() => {
+      contentLoaded = true;
+    }, 100);
   });
 </script>
 
-<section class="py-6 bg-white">
-  <div class="container mx-auto max-w-[640px] px-4">
-    <div class="space-y-8 text-[28px] leading-relaxed font-bold">
-      <p>
-        <TextReveal text={paragraph1Start} />
-        <span class="inline-flex items-center mt-[5px]">
-          <AnimatedTooltip items={teamMembers} />
-        </span>
-        <TextReveal text={paragraph1End} />
-      </p>
-      <p><TextReveal text={paragraph2} /></p>
-      <div class="space-y-4">
-        {#each steps as step, i}
-          <p><TextReveal text={`${i + 1}. ${step}`} /></p>
-        {/each}
+<section class="relative">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        <TextReveal text="How we work" />
+      </h2>
+      <div class="mt-6 text-lg leading-8 text-gray-600">
+        <p>
+          <TextReveal text={paragraph1Start} /><TextReveal text={paragraph1End} />
+        </p>
+        <p class="mt-6">
+          <TextReveal text={paragraph2} />
+        </p>
+        <ul class="mt-8 space-y-4 text-gray-600">
+          {#each steps as step}
+            <li class="flex gap-x-3">
+              <BlurReveal>
+                <CardProduct>
+                  {step}
+                </CardProduct>
+              </BlurReveal>
+            </li>
+          {/each}
+        </ul>
       </div>
-      <p>
-        <a 
-          href="/work" 
-          class="relative hover:text-primary transition-colors after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 [&.reveal]:after:origin-bottom-left [&.reveal]:after:scale-x-100"
-          bind:this={linkElement}
-        >
-          <TextReveal text={paragraph4} />
-        </a>
-      </p>
     </div>
-    <div class="mt-16 flex justify-center">
-      <BlurReveal>
-        <CardProduct />
-      </BlurReveal>
-    </div>
+
+    {#if contentLoaded}
+      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-gray-900 sm:grid-cols-2 md:flex lg:gap-x-10">
+          <AnimatedTooltip {teamMembers} />
+        </div>
+      </div>
+    {/if}
   </div>
 </section>
