@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "../lib/utils";
   import { Motion } from "svelte-motion";
-  import { getRandomTileColor } from "$lib/colors";
+  import { getRandomTileColor } from "../lib/colors";
 
   let className: any = "";
   export { className as class };

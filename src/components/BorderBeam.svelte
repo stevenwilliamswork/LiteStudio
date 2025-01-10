@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "../lib/utils";
 
   export let size = 200;
   export let duration = 15;
