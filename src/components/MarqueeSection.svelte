@@ -11,6 +11,11 @@
     mounted = true;
   }, 100);
 
+  const marqueeProjects = [
+    ...projects,
+    { id: 'project-one-alt', screenshots: ['/project1-work1.jpg'] }
+  ];
+
   // Duplicate some reviews to have enough for three rows
   const reviews = [
     {
@@ -44,7 +49,7 @@
   {#if mounted}
     <div transition:fade={{ duration: 800, delay: 400 }}>
       <Marquee pauseOnHover class="[--duration:40s] [--gap:32px]">
-        {#each projects as project}
+        {#each marqueeProjects as project}
           <WorkCard id={project.id} img={project.screenshots[0]} />
         {/each}
       </Marquee>

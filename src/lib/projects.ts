@@ -18,14 +18,5 @@ export const projects: Project[] = [
     duration: '12 weeks',
     screenshots: ['/project2.jpg', '/project2-work1.jpg', '/project2-work2.jpg'],
     url: 'https://dataviz.com'
-  },
-  {
-    id: 'project-three',
-    title: 'Showcased',
-    description: 'A custom website for musicians showcasing in-progress music and albums',
-    services: ['Design', 'Development'],
-    duration: '3 weeks',
-    screenshots: ['/project3.jpg', '/project3-work1.jpg', '/project3-work2.jpg'],
-    url: 'https://ecommerce.com'
   }
 ];
