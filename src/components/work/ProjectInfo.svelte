@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ExternalLink } from 'lucide-svelte';
-  import type { Project } from '$lib/types';
+  import type { Project } from '../../lib/types';
   
   export let project: Project;
 </script>

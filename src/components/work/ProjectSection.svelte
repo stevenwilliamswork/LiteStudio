@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Project } from '$lib/types';
+  import type { Project } from '../../lib/types';
   
   export let project: Project;
   export let index: number;

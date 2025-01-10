@@ -2,8 +2,8 @@
   import { createEventDispatcher } from 'svelte';
   import { Motion, animate } from "svelte-motion";
   import { ChevronRight, ArrowLeft, ChevronDown } from 'lucide-svelte';
-  import { cn } from "$lib/utils";
-  import type { Project } from '$lib/types';
+  import { cn } from "../../lib/utils";
+  import type { Project } from '../../lib/types';
   
   let className = "";
   export { className as class };

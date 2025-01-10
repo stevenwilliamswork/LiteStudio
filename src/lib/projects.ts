@@ -8,24 +8,15 @@ export const projects: Project[] = [
     services: ['Design', 'Development'],
     duration: '12 weeks',
     screenshots: ['/project1.jpg', '/project1-work1.jpg', '/project1-work2.jpg'],
-    url: 'https://ghostnotes.app'
+    url: 'https://ghostnotes.io'
   },
   {
     id: 'project-two',
     title: 'HSW',
     description: 'Share a beautiful list of your favorite songs with anyone. Music Service-agnostic.',
     services: ['Design', 'Development'],
-    duration: '12 weeks',
+    duration: '7 weeks',
     screenshots: ['/project2.jpg', '/project2-work1.jpg', '/project2-work2.jpg'],
-    url: 'https://dataviz.com'
-  },
-  {
-    id: 'project-three',
-    title: 'Showcased',
-    description: 'A custom website for musicians showcasing in-progress music and albums',
-    services: ['Design', 'Development'],
-    duration: '3 weeks',
-    screenshots: ['/project3.jpg', '/project3-work1.jpg', '/project3-work2.jpg'],
-    url: 'https://ecommerce.com'
+    url: 'https://hearsomethingwonderful.com'
   }
 ];
