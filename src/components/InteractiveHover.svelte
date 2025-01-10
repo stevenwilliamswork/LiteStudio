@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "../lib/utils";
   import { ArrowRight } from "lucide-svelte";
   let _class: string = "";
   export { _class as class };

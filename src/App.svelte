@@ -6,8 +6,17 @@
   import Footer from './components/Footer.svelte';
   import Work from './components/Work.svelte';
   import DelayWrapper from './lib/components/DelayWrapper.svelte';
+  import { onMount } from 'svelte';
 
   export let url = "";
+
+  onMount(() => {
+    document.addEventListener('contextmenu', (e) => {
+      if (e.target instanceof HTMLImageElement) {
+        e.preventDefault();
+      }
+    });
+  });
 </script>
 
 <Router {url}>

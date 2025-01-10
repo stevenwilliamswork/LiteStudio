@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "../lib/utils";
   export let img: string;
   export let name: string;
   export let username: string;
@@ -14,11 +14,10 @@
   <div class="flex flex-row items-center gap-2">
     <img class="rounded-full" width="32" height="32" alt="" src={img} />
     <div class="flex flex-col">
-      <figcaption class="text-sm font-medium text-[#070513]">
-        {name}
-      </figcaption>
+      <span class="text-sm font-medium text-[#070513]">{name}</span>
       <p class="text-xs font-medium text-[#070513]/60">{username}</p>
     </div>
   </div>
   <blockquote class="mt-2 text-sm text-[#070513]">{body}</blockquote>
+  <figcaption class="sr-only">{name}'s review</figcaption>
 </figure>
