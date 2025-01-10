@@ -13,15 +13,15 @@
 
   const marqueeProjects = [
     ...projects,
-    { id: 'project-one-alt', screenshots: ['/project1-work1.jpg'] }
+    { id: 'project-two-alt', screenshots: ['/project2-work1.jpg'] }
   ];
 
   // Duplicate some reviews to have enough for three rows
   const reviews = [
     {
-      name: "Bhide",
-      username: "@Bhide",
-      body: "Noicee work. I love it. Keep it up.",
+      name: "Jenn",
+      username: "@Jennnnni",
+      body: "Nice work. I love the design. Keep it up.",
       img: "https://avatar.vercel.sh/jack",
     },
     {
@@ -31,15 +31,15 @@
       img: "https://avatar.vercel.sh/jill",
     },
     {
-      name: "Pokie",
-      username: "@Pokie",
+      name: "Cam",
+      username: "@camnotfound",
       body: "Just talking through my idea was helpful, thanks!",
       img: "https://avatar.vercel.sh/john",
     },
     {
-      name: "pablo",
-      username: "@pablo",
-      body: "Remarkable Stuff broooo. Added to my favourites.",
+      name: "Anthony",
+      username: "@alargeant",
+      body: "Some good ideas here. I'm following",
       img: "https://avatar.vercel.sh/jane",
     },
   ];

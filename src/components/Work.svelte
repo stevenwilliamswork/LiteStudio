@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import { onMount } from 'svelte';
-  import { projects } from '$lib/projects';
+  import { projects } from '../lib/projects';
   import ProjectNav from './work/ProjectNav.svelte';
   import ProjectInfo from './work/ProjectInfo.svelte';
   import ProjectSection from './work/ProjectSection.svelte';

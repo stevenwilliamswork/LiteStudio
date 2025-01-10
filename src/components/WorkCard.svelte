@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { cn } from "$lib/utils";
+  import { cn } from "../lib/utils";
   export let id: string;
   export let img: string;
 </script>
